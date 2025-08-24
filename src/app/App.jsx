@@ -24,9 +24,10 @@ function App() {
         <h3 className="desc">Press the coin or the button to flip the coin</h3>
       </div>
 
-      <div className="coin">
+      <div className="coinComp">
         <div className={`HorT ${animating ? "flip" : ""}`}>
           <img
+            className="coin"
             src={result === "Coroa" ? "/tails.svg" : "/heads.svg"}
             alt="moeda"
             onClick={jogarMoeda}

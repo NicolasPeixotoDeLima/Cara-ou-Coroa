@@ -22,11 +22,28 @@
     1px 1px 0 black;
 }
 
-.coin {
+.coinComp {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 59px;
+}
+
+.coin {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animação de subir e descer */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* sobe 20px */
+  }
+  100% {
+    transform: translateY(0); /* volta à posição inicial */
+  }
 }
 
 .shadow {
