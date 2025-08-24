@@ -29,6 +29,7 @@ function App() {
           <img
             src={result === "Coroa" ? "/tails.svg" : "/heads.svg"}
             alt="moeda"
+            onClick={jogarMoeda}
           />
         </div>
 
