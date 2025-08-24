@@ -1,42 +1,92 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.TitleComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
+  font-size: 5rem;
+  color: #fcb004;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.desc {
+  font-size: 2rem;
+  color: #fedf74;
+  margin-bottom: 50px;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.coin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 59px;
+}
+
+.shadow {
+  margin-top: 30px;
+}
+
+.result {
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  color: #d8e7c9;
+}
+
+.botao {
+  height: 50px;
+  width: 120px;
+  border-radius: 25px;
+  background-color: rgb(243, 225, 64);
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+/* efeito ao passar o mouse */
+.botao:hover {
+  background-color: rgb(255, 200, 0);
+  transform: scale(1.05);
+}
+
+/* efeito quando estiver desabilitado */
+.botao:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.HorT {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.HorT img {
+  width: 100%;
+  height: 100%;
+}
+
+.flip {
+  animation: girar 2s ease-in-out;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotateY(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: rotateY(1440deg); /* 4 voltas */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
