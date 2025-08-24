@@ -10,7 +10,7 @@ function App() {
 
     // espera o tempo da animação e depois sorteia
     setTimeout(() => {
-      const lados = ["cara", "coroa"];
+      const lados = ["Cara", "Coroa"];
       const sorteio = lados[Math.floor(Math.random() * lados.length)];
       setResult(sorteio);
       setAnimating(false);
@@ -27,7 +27,7 @@ function App() {
       <div className="coin">
         <div className={`HorT ${animating ? "flip" : ""}`}>
           <img
-            src={result === "coroa" ? "/tails.svg" : "/heads.svg"}
+            src={result === "Coroa" ? "/tails.svg" : "/heads.svg"}
             alt="moeda"
           />
         </div>
